@@ -42,4 +42,5 @@ def Put(S, K , r,sigma, T):
     
     return temp_put
 
-# TODO: neaten up and make more readable, this is just for practice from reading the Paul Wilmott textbook.
+# [] -TODO: neaten up and make more readable, this is just for practice from reading the Paul Wilmott textbook.
+# [] -TODO: the erf() 'error function' is a sigmoid... so can we use the same function in Neural Networks?.... check out later
