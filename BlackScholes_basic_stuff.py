@@ -1,3 +1,7 @@
+# Quick implementation of Black-Scholes for Call and Put option pricing
+# Reference: Paul Wilmott Introduces Quantitative Finance - multiple chapters...
+
+
 #from math import sqrt, erf, log, exp
 import math
 
