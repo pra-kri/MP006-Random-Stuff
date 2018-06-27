@@ -94,3 +94,26 @@ def generate_bin_strings(N):
     return bin_strings   
     
 zzzz = generate_bin_strings(4)
+
+
+def binary_locate_in_df(dataframe ,binarystring):
+    """
+    Wherever there's a 0 in the binary string,
+    it removes the corresponding column from the dataframe.
+    """
+    temp_df = dataframe
+    remove_list = []
+    for i in range(0, len(binarystring)):
+        print(i, int(binarystring[i]), temp_df.columns[i])
+        #print(binarystring[i])
+        #print(temp_df.columns[i])
+        if int(binarystring[i]) == 0:
+            remove_list.append(int(i))
+    
+    temp_df = temp_df.drop(temp_df.columns[remove_list], axis = 1)      
+   
+    return temp_df
+
+ooooo = binary_locate_in_df(data_FULL, "11001101")
+# so for this one, wind.velocity, wind.direction and temperature.1 should be removed...
+# YEPPP WORKS SO FAR...
