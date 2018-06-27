@@ -72,3 +72,25 @@ ccc= multi_lin_reg(X_train, X_test, Y_train, Y_test)
 print(ccc['R2_Score'])
 print(ccc['MeanSqError'])
 print(ccc['X_variables'])
+
+
+
+
+
+
+#print(bin(2)[2:].zfill(8))
+
+def generate_bin_strings(N):
+    """
+    Generates all possible binary strings, up to length N.
+    Use for the permutations of possible model predictors
+    """
+    total = 2**N
+    bin_strings = []
+    for i in range(0, total):
+        bin_str = bin(i)[2:].zfill(N)
+        bin_strings.append(bin_str)
+    #print("Total = " + str(total))
+    return bin_strings   
+    
+zzzz = generate_bin_strings(4)
